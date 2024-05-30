@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Noctilians</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+         <div class="hero">
+            <img src="images/logo.png" alt="Noctilians Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <div class="language-buttons">
+                <button id="englishBtn">English</button>
+                <button id="frenchBtn">Français</button>
+            </div>
+            <div id="bioEnglish" class="bio-content">
+                <p>It is in the last attempt to return home after a Parisian evening, miraculous with cultural encounters and sound discoveries, that one allows themselves to be carried around the metropolis in the microcosm of the night bus (the Noctilien). A place where diverse, improbable characters mix, exchanging all sorts of singularities and ideas. An effervescent collage of varied universes, brought together to create something unique. This is the recipe that Noctilians produces in their soundscape. A style that gradually builds around funk, alternative rock, psychedelic, and electro-house. Drawing from its pop-funk references like Daft Punk, Parcels, Sly and the Family Stone, and even more eclectic influences like Connan Mockasin, Pink Floyd, or MGMT, Noctilians' style gives rise to a distinct musical identity. On stage, the five members of Noctilians bring their specificities to create a universe as wild as it is thoughtful. Driven by the rhythms of Alex Bilau (an experienced drummer who played at the Bataclan in 2018), guided by the groove of Faris Dziri (bassist and guitarist from the Blois Conservatory), enriched by the multi-instrumentality of Romain Huet (composer, guitarist, bassist, and pianist), and catalyzed by Thomas Macquet (vocals, guitar) and Aidan Redmond (vocals, synthesizer), this group offers an authentic energy, freely sharing the taste for evolving music.</p>
+            </div>
+            <div id="bioFrench" class="bio-content" style="display: none;">
+                <p>C’est dans la dernière tentative de rentrer chez soi après une soirée parisienne miraculée par des rencontres culturelles et des découvertes sonores, que l’on se laisse porter autour de la métropole dans le microcosme du bus de nuit (le noctilien). Un lieu où se mélangent des personnages divers, improbables, échangeant toutes sortes de singularités, d’idées. Un collage effervescent d’univers variés, réunis pour créer quelque chose d’unique. C’est cette recette que Noctilians produit dans son paysage sonore. Un style qui se construit progressivement autour du funk, du rock alternatif, psychédélique, et de l’électro-house. En puisant dans ses références de la pop-funk tels Daft Punk, Parcels, Sly and the Family Stone ou d’autres encore plus éclectiques comme Connan Mockasin, Pink Floyd ou MGMT, le style de Noctilians fait naître une identité musicale distincte. Sur scène, les cinq membres de Noctilians apportent leur spécificités pour créer un univers aussi sauvage que réfléchi. Portés par les rythmes d’Alex Bilau (batteur expérimenté ayant joué au Bataclan en 2018), guidé par le groove de Faris Dziri (bassiste et guitariste du conservatoire de Blois), enrichi par la pluri-instrumentalité de Romain Huet, (compositeur, guitariste, bassiste et pianiste) et catalysé par Thomas Macquet (chant, guitare) et Aidan Redmond (chant, synthétiseur), ce groupe propose une énergie authentique offrant sans restreinte le goût du partage et de la musique évolutive.</p>
+            </div>
+        </section>
+        <section>
+            <h2>Gallery</h2>
+            <img src="images/main.jpg" alt="main" class="img-resize">
+            <!-- Add more images as needed -->
+        </section>
+        <section>
+            <h2>Credits</h2>
+            <blockquote>
+                <p>Photgraphy by Thibault Graves</p>
+                <a href="https://www.instagram.com/corrupttheworld/" target="_blank">Instagram</a>
+            </blockquote>
+            <!-- Add more quotes -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Noctilians. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const englishBtn = document.getElementById('englishBtn');
+            const frenchBtn = document.getElementById('frenchBtn');
+            const bioEnglish = document.getElementById('bioEnglish');
+            const bioFrench = document.getElementById('bioFrench');
+
+            englishBtn.addEventListener('click', function () {
+                bioEnglish.style.display = 'block';
+                bioFrench.style.display = 'none';
+            });
+
+            frenchBtn.addEventListener('click', function () {
+                bioEnglish.style.display = 'none';
+                bioFrench.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>

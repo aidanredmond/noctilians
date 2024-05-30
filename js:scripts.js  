@@ -1,0 +1,55 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contactForm');
+
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (name === '') {
+            alert('Name is required.');
+            return;
+        }
+
+        if (email === '') {
+            alert('Email is required.');
+            return;
+        }
+
+        if (!validateEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        if (message === '') {
+            alert('Message is required.');
+            return;
+        }
+
+        // Proceed with form submission
+        contactForm.submit();
+    });
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const englishBtn = document.getElementById('englishBtn');
+    const frenchBtn = document.getElementById('frenchBtn');
+    const bioEnglish = document.getElementById('bioEnglish');
+    const bioFrench = document.getElementById('bioFrench');
+
+    englishBtn.addEventListener('click', function () {
+        bioEnglish.style.display = 'block';
+        bioFrench.style.display = 'none';
+    });
+
+    frenchBtn.addEventListener('click', function () {
+        bioEnglish.style.display = 'none';
+        bioFrench.style.display = 'block';
+    });
+});
